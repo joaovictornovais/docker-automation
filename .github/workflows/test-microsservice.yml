@@ -16,12 +16,12 @@ jobs:
           python-version: "3.12.4"
 
       - name: Install dependencies
-        working-directory: burguer-app/auth-service
+        working-directory: ./burguer-app/auth-service
         run: |
-          pip install -r burguer-app/auth-service/requirements.txt
+          pip install -r requirements.txt
 
       - name: Run tests
-        working-directory: burguer-app/auth-service
+        working-directory: ./burguer-app/auth-service
         run: |
           pytest -v --cov=models --cov=services --cov=config --cov=controllers
           radon cc ./models/auth_model.py
@@ -35,12 +35,12 @@ jobs:
           python-version: "3.12.4"
 
       - name: Install dependencies
-        working-directory: burguer-app/user-service
+        working-directory: ./burguer-app/user-service
         run: |
-          pip install -r burguer-app/user-service/requirements.txt
+          pip install -r requirements.txt
 
       - name: Run tests
-        working-directory: burguer-app/user-service
+        working-directory: ./burguer-app/user-service
         run: |
           pytest -v --cov=models --cov=services --cov=config --cov=controllers
           radon cc ./models/user_model.py
@@ -54,12 +54,12 @@ jobs:
           python-version: "3.12.4"
 
       - name: Install dependencies
-        working-directory: burguer-app/product-service
+        working-directory: ./burguer-app/product-service
         run: |
-          pip install -r burguer-app/product-service/requirements.txt
+          pip install -r requirements.txt
 
       - name: Run tests
-        working-directory: burguer-app/product-service
+        working-directory: ./burguer-app/product-service
         run: |
           pytest -v --cov=models --cov=services --cov=config --cov=controllers
           radon cc ./models/product_model.py
@@ -73,12 +73,12 @@ jobs:
           python-version: "3.12.4"
 
       - name: Install dependencies
-        working-directory: burguer-app/order-service
+        working-directory: ./burguer-app/order-service
         run: |
-          pip install -r burguer-app/order-service/requirements.txt
+          pip install -r requirements.txt
 
       - name: Run tests
-        working-directory: burguer-app/order-service
+        working-directory: ./burguer-app/order-service
         run: |
           pytest -v --cov=models --cov=services --cov=config --cov=controllers
           radon cc ./models/order_model.py
